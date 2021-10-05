@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>include</title>
+</head>
+<body>
+<?php
+
+    // 1. 파일 포함 시키기
+    // include 'heading.html';
+
+    // echo $testVar1;
+
+    // 2. 파일을 한 번만 포함 시키기
+    include_once 'heading.html';
+    include_once 'heading.html';    
+
+    echo $testVar1;
+?>
+</body>
+</html>

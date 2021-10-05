@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+<?php
+    /******************************************
+     * 1. Numeric array
+     *****************************************/
+    /* array 생성자를 이용한 생성 */
+    // $numbers = array( 11, 22, 33, 44, 55);
+    
+    // foreach( $numbers as $value ) {
+    //     echo "Value is $value <br />";
+    // }
+    
+    /* array 인덱스를 이용한 생성 */
+    // $numbers[0] = "one";
+    // $numbers[1] = "two";
+    // $numbers[2] = "three";
+    // $numbers[3] = "four";
+    // $numbers[4] = "five";
+    
+    // foreach( $numbers as $value ) {
+    //     echo "Value is $value <br />";
+    // }
+
+    /******************************************
+     * 2. Associative array
+     *****************************************/ 
+    /* array 생성자를 이용한 생성 */
+    // $salaries = array("susan" => 2000, "jackson" => 1000, "mars" => 500);
+    
+    // echo "Salary of susan is ". $salaries['susan'] . "<br />";
+    // echo "Salary of jackson is ".  $salaries['jackson']. "<br />";
+    // echo "Salary of mars is ".  $salaries['mars']. "<br />";
+    
+    /* array key-value를 이용한 생성 */
+    // $salaries['susan'] = "high";
+    // $salaries['jackson'] = "medium";
+    // $salaries['mars'] = "low";
+    
+    // foreach ($salaries as $name => $level) {
+    //     echo "Salary of {$name} is {$level}<br/>";
+    // } 
+ 
+    /******************************************
+     * 3. Multidimensional Arrays
+     *****************************************/     
+    // $marks = array( 
+    //     "susan" => array (
+    //        "physics" => 35,
+    //        "maths" => 30,	
+    //        "chemistry" => 39
+    //     ),
+        
+    //     "jackson" => array (
+    //        "physics" => 30,
+    //        "maths" => 32,
+    //        "chemistry" => 29
+    //     ),
+        
+    //     "mars" => array (
+    //        "physics" => 31,
+    //        "maths" => 22,
+    //        "chemistry" => 39
+    //     )
+    //  );
+     
+    /* Accessing multi-dimensional array values */
+    //  echo "Marks for susan in physics : " ;
+    //  echo $marks['susan']['physics'] . "<br />"; 
+     
+    //  echo "Marks for jackson in maths : ";
+    //  echo $marks['jackson']['maths'] . "<br />"; 
+     
+    //  echo "Marks for mars in chemistry : " ;
+    //  echo $marks['mars']['chemistry'] . "<br />"; 
+
+    /******************************************
+     * 4. Sort, Rsort : 값을 기준으로 정렬
+     *****************************************/   
+
+    /* sort : Ascending */ 
+    // $fruits = array("lemon", "orange", "banana", "apple");
+    // sort($fruits);
+    // foreach ($fruits as $key => $val) {
+    //     echo "fruits[" . $key . "] = " . $val . "<br>";
+    // } 
+
+    /*
+    fruits[0] = apple
+    fruits[1] = banana
+    fruits[2] = lemon
+    fruits[3] = orange    
+    */
+
+    /* rsort : Descending */     
+    // $fruits = array("lemon", "orange", "banana", "apple");
+    // rsort($fruits);
+    // foreach ($fruits as $key => $val) {
+    //     echo "fruits[" . $key . "] = " . $val . "<br>";
+    // }     
+
+    /******************************************
+     * 5. Asort, Arsort : value를 기준으로 정렬
+     *****************************************/   
+
+    /* asort : Ascending */ 
+    // $fruits = array("l" => "lemon", "o" => "orange", "b" => "banana", "a" => "apple");
+    // asort($fruits);
+    // foreach ($fruits as $key => $val) {
+    //     echo "$key = $val<br>";
+    // }
+
+    /* arsort : Descending */ 
+    // $fruits = array("l" => "lemon", "o" => "orange", "b" => "banana", "a" => "apple");
+    // arsort($fruits);
+    // foreach ($fruits as $key => $val) {
+    //     echo "$key = $val<br>";
+    // }    
+
+    /******************************************
+     * 6. Krsort, Krsort : key를 기준으로 정렬
+     *****************************************/   
+
+    /* ksort : Ascending */ 
+    // $fruits = array("l" => "lemon", "o" => "orange", "b" => "banana", "a" => "apple");
+    // ksort($fruits);
+    // foreach ($fruits as $key => $val) {
+    //     echo "$key = $val<br>";
+    // }
+
+    /* krsort : Descending */ 
+    // $fruits = array("l" => "lemon", "o" => "orange", "b" => "banana", "a" => "apple");
+    // krsort($fruits);
+    // print_r($fruits);
+    // foreach ($fruits as $key => $val) {
+    //     echo "$key = $val<br>";
+    // }        
+
+    /******************************************
+     * 7. Shuffle : 랜덤 정렬
+     *****************************************/       
+    // $weekdays = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday");
+    // shuffle($weekdays);
+    // print_r($weekdays);
+
+    /******************************************
+     * 8. Array_sum : 배열의 숫자의 합
+     *****************************************/   
+    // $a = array(2, 4, 6, 8);
+    // echo "sum(a) = " . array_sum($a) . "<br>";
+    
+    // $b = array("a" => 1.2, "b" => 2.3, "c" => 3.4);
+    // echo "sum(b) = " . array_sum($b) . "<br>";    
+    
+
+    /******************************************
+     * 9. Array_merge : 배열 합치기
+     *****************************************/   
+
+    /* 배열 합치기 */ 
+    // $first = array("hello", "world");   // 0 - hello, 1 - world
+    // $second = array("exit", "here");    // 0 - exit, 1 - here
+    // $merged = array_merge($first, $second);    
+
+    // foreach ($merged as $key => $val) {
+    //     echo "merged[" . $key . "] = " . $val . "<br>";
+    // } 
+
+    /* 중복이 있는 경우 합치기 */     
+    // $first = array('bill' => "clinton", 'tony' => "danza");
+    // $second = array('bill' => "gates", 'adam' => "west");
+    // $merged = array_merge($first, $second);
+
+    // foreach ($merged as $key => $val) {
+    //     echo "merged[" . $key . "] = " . $val . "<br>";
+    // }     
+
+    /******************************************
+    * 10. Array_filter  : Filters elements of an array using a callback function
+    *****************************************/       
+
+    /* callback 함수를 이용한 홀수값 출력 */
+    // function isOdd ($element) {
+    //     return $element % 2;
+    // }
+
+    // $numbers = array(9, 23, 24, 27);
+    // $odds = array_filter($numbers, "isOdd");
+    // print_r($odds);
+
+    /* callback 함수가 없는 경우 */    
+    // $entry = [
+    //     0 => 'foo',
+    //     1 => false,
+    //     2 => -1,
+    //     3 => null,
+    //     4 => '',
+    //     5 => '0',
+    //     6 => 0,
+    // ];
+    
+    // print_r(array_filter($entry));
+
+    /******************************************
+    * 11. Array_push
+    *****************************************/
+    
+    // $stack = array("orange", "banana");
+    // array_push($stack, "apple", "berry");
+    // print_r($stack);
+
+    /* 위와 같은 결과 */        
+    // $stack = array("orange", "banana");
+    // $stack[] = "apple";
+    // $stack[] = "berry";
+    // print_r($stack);
+
+    /******************************************
+    * 12. Array_pop
+    *****************************************/         
+    // $stack = array("orange", "banana", "apple", "raspberry");
+    // $fruit = array_pop($stack);
+    // print_r($stack);         
+?>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatype</title>
+</head>
+<body>
+<?php
+
+    /*******************************************************
+     * Integers
+     ******************************************************/
+    // 1. (−2,147,483,648 to +2,147,483,647)
+    // $aaa = 1998;
+    // $bbb = -11;
+    // $ccc = +33;
+
+    // echo $aaa . " " . $bbb . " " . $ccc;
+
+    // 2. Octal numbers(8진수 : 0)
+    // $aaa = 0755;        // decimal 493
+    // $bbb = +010;        // decimal 8    
+
+    // echo $aaa . " " . $bbb;
+
+    // 3. Hexadecimal(16진수 : 0x)    
+    // $aaa = 0xFF;        // decimal 255
+    // $bbb = 0x10;        // decimal 16
+    // $ccc = -0xDAD1;     // decimal −56017
+
+    // echo $aaa . " " . $bbb . " " . $ccc;    
+
+    // 4. Hexadecimal(16진수 : 0b)        
+    // $aaa = 0b01100000;  // decimal 96
+    // $bbb = 0b00000010;  // decimal 2
+    // $ccc = -0b10;       // decimal -2
+
+    // echo $aaa . " " . $bbb . " " . $ccc;     
+
+    // 5. integer인지 체크
+    // $aaa = 0b01100000;  // decimal 96
+    // if (is_int($aaa)) {
+    //     echo "$aaa is Integer";
+    // }
+
+    /*******************************************************
+     * Floating-Point Numbers
+     ******************************************************/   
+
+    // 1. 소숫점 표시
+    // $aaa = 3.14;
+    // $bbb = 0.017;
+    // $ccc = -7.1;
+
+    // echo $aaa . " " . $bbb . " " . $ccc;         
+
+    // 2. 과학 계산용
+    // $aaa = 0.314E1;     // 0.314*10^1, or 3.14
+    // $bbb = 17.0E-3;     // 17.0*10^(-3), or 0.017   
+    
+    // echo $aaa . " " . $bbb;
+
+    // 3. float 인지 체크
+    // $aaa = 0.314E1;     // 0.314*10^1, or 3.14
+    // if (is_float($aaa)){
+    //     echo "$aaa is Float";        
+    // }
+
+    /*******************************************************
+     * Strings
+     ******************************************************/  
+
+    // 1. 문장열 표시
+    // $aaa = 'big dog';
+    // $bbb = "fat hog";
+    
+    // echo $aaa . " " . $bbb;
+
+    // 2. 문자열 비교
+    // $aaa = 'big';
+    // $bbb = "big";    
+
+    // if ($aaa == $bbb){
+    //     echo "$aaa and $bbb are equal";
+    // }
+
+    // 3. string 인지 체크
+    // $aaa = 'big dog';
+    // if (is_string($aaa)){
+    //     echo "$aaa is a string";
+    // }
+
+    /*******************************************************
+     * Booleans
+     ******************************************************/ 
+    
+    //  1. booleans 변수 표시
+    // $aaa = 5; // $x has a true value
+    // $bbb = true; // clearer way to write it
+    // $ccc = ""; // $y has a false value
+    // $ddd = false; // clearer way to write it     
+
+    // if ($ddd) {
+    //     echo "$ddd is a true";
+    // }
+    // else {
+    //     echo "$ddd is a false";
+    // }
+
+    // 2. booleans 변수인지 체크
+    // $bbb = false;
+    // if (is_bool($bbb)) {
+    //     echo "$bbb is a Boolean";
+    // }
+
+    /*******************************************************
+     * Arrays
+     ******************************************************/ 
+
+    //  1. position을 이용한 배열 생성 및 출력
+    // $person[0] = "Edison";
+    // $person[1] = "Light Brothers";
+    // $person[2] = "Crapper";
+
+    // $person = array("Edison", "Light Brothers", "Crapper");     // array construct를 이용
+
+    // foreach ($person as $name) {
+    //    echo "Hello, {$name}<br/>";
+    // }
+
+    // 2. key 값을 이용한 배열 생성 및 출력
+    // $creator['Lights'] = "Edison";
+    // $creator['Plane'] = "Light Brothers";
+    // $creator['Toilet'] = "Crapper";    
+
+    // foreach ($creator as $invention => $inventor) {
+    //     echo "{$inventor} invented the {$invention}<br/>";
+    // }   
+    
+    // 3. 배열인지 체크
+    // $person[0] = "Edison";
+    // if (is_array($person)) {
+    //     echo "person variable is an array";
+    // }    
+
+    /*******************************************************
+     * Objects
+     ******************************************************/ 
+
+    // 1. Objects 사용
+    // class Person
+    // {
+    //     public $name = '';
+    //     function name ($newname = NULL)
+    //     {
+    //         if (!is_null($newname)) {
+    //             $this->name = $newname;
+    //         }
+
+    //         return $this->name;
+    //     }
+    // }      
+    
+    // $ed = new Person;
+    // $f_name = $ed->name('Edison');
+    // echo "Hello, {$f_name} <br/>";
+    // echo "Hello, {$ed->name} <br/>";
+
+    // $tc = new Person;
+    // $tc->name('Crapper');
+    // echo "Look out below {$tc->name} <br/>";
+
+    // 2. Objects 인지 체크
+    // class Person
+    // {
+    //     public $name = '';
+    //     function name ($newname = NULL)
+    //     {
+    //         if (!is_null($newname)) {
+    //             $this->name = $newname;
+    //         }
+
+    //         return $this->name;
+    //     }
+    // }      
+    
+    // $ed = new Person;    
+    // if (is_object($ed)) {
+    //     echo "variable is an object";
+    // }
+
+    /*******************************************************
+    * NULL - case-insensitive
+    ******************************************************/     
+
+    // 1. null 사용
+    $alpha = "beta";
+    $alpha = null; 
+    $alpha = Null; 
+    $alpha = NULL; 
+
+    // 2. null 인지 체크
+    $alpha = null;
+    if (is_null($alpha)) {
+        echo "variable is NULL";
+    }    
+?>
+</body>
+</html>

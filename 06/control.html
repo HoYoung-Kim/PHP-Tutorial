@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control</title>
+</head>
+<body>
+<?php
+
+    /******************************************
+    * 1. If
+    ******************************************/
+
+    /* If 일반적인 형식 */
+    // $var_bool = 100;
+    // if ($var_bool === 100) {
+    //     echo("Variable is $var_bool"."<br>");
+    // }
+    // elseif ($var_bool === 200) {
+    //     echo("Variable is $var_bool"."<br>");
+    // }
+    // else {
+    //     echo("Variable is not value..."."<br>");
+    // }     
+
+    /* html 내에서 사용하는 형식 */    
+    $active = true;    
+?>
+    <?php if($active) { echo "yes"; } else { echo "no"; } ?>
+
+    <!-- 삼항 연산자 이용시 -->
+    <?php echo $active ? "yes" : "no"; ?>
+
+<?php
+
+    /******************************************
+    * 2. Switch
+    ******************************************/
+
+    // $name = 'bruno';
+    // switch ($name) {
+    //     case 'sylvie': 
+    //     case 'bruno':
+    //         echo("$name");
+    //         break;
+    //     default:
+    //         echo("$name");
+    //         break;
+    // }
+
+    /******************************************
+    * 3. While
+    ******************************************/    
+
+    // $d = 1;    
+    // while ($d < 5)
+    // {
+    //     echo 'The value of $d is '.$d.'<BR>';
+    //     $d++;
+    // }    
+
+    // $e = 100;    
+    // do {
+    //     echo 'The value of $e is '.$e.'<BR>';
+    //     $e++;
+    // } while ($e < 0);    
+
+    /******************************************
+    * 4. For
+    ******************************************/       
+
+    // for ($c = 1; $c < 5; ++$c){
+    //     echo 'The value of $c is '.$c.'<BR>';
+    // }    
+
+    /******************************************
+    * 5. Foreach (array loop)
+    ******************************************/  
+
+    // $arr1 = array(11, 12, 13, 14, 15);
+    // foreach ($arr1 as $num){
+    //     echo 'The number is '.$num.'<BR>';
+    // }
+
+    // $arr2 = array('Aaron'=>12, 'Ben'=>23, 'Carol'=>35);    
+    // foreach ($arr2 as $name=>$age){
+    //     echo $name.' is '.$age.' years old.<BR>';
+    // }
+
+    /******************************************
+    * 6. Try … Catch
+    ******************************************/
+    #region
+    // function inverse($x) {
+    //     if (!$x) {
+    //         throw new Exception('Division by zero.');
+    //     }
+    //     return 1/$x;
+    // }
+    
+    // try {
+    //     echo inverse(5) . "<BR>";
+    //     echo inverse(0) . "<BR>";
+    // } catch (Exception $e) {
+    //     echo 'Caught exception: ',  $e->getMessage(), "<BR>";
+    // }
+    
+    // echo "Hello World";
+    #endregion
+
+    /******************************************
+    * 7. Break & Continue
+    ******************************************/    
+    #region
+    // for ($i = 0; $i < 50; ++$i)
+    // {
+    //     echo "$i<BR>";
+    //     if ($i === 4)
+    //         break;
+    // } 
+    
+    // for ($i = 0; $i < 6; ++$i)
+    // {
+    //     echo '$i = '.$i.', ';
+    //     if ($i === 4)
+    //         continue;
+
+    //     echo 'First.';
+    //     echo 'Second.<BR>';
+    // }  
+    #endregion  
+?>
+</body>
+</html>

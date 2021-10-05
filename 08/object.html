@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+<?php
+
+    /******************************************
+    * 1. Example
+    ******************************************/ 
+
+    #region
+
+    // class PERSIONINFO {
+    //     public $name = '';
+    //     public $age = 0;
+    // }
+
+    // /* input data */
+    // $info = array();
+    // for ($i=0; $i<10; $i++){
+    //     $person = new PERSIONINFO();
+
+    //     $person->name = 'Name_' . $i;
+    //     $person->age = $i;
+
+    //     array_push($info, $person);
+    // }
+    
+    // echo "<pre>";
+    // print_r($info);
+    // echo "</pre>";
+
+    // /* ouput data */
+    // $cnt = 0;
+    // if(is_array($info)) $cnt = count($info);
+    // for ($i=0; $i<$cnt; $i++){
+    //     $obj = $info[$i];
+
+    //     echo $i . " : " . $obj->name . ", " .  $obj->age . "<br>";
+    // }
+
+    #endregion
+
+    /******************************************
+    * 2. Construct / Destruct / Access Modifier
+    ******************************************/ 
+
+    #region    
+    // class PERSIONINFO {
+    //     private $name = '';
+    //     private $age = 0;
+      
+    //     function __construct($name, $age) {
+    //         $this->name = $name;
+    //         $this->age = $age;
+    //     }
+
+    //     function get_name() {
+    //         return $this->name;
+    //     }
+
+    //     function __destruct() {
+    //         echo "The destruct is called.<br>";
+    //     }        
+    // }
+    
+    // $persion = new PERSIONINFO("Hong Gil Dong", 23);
+    // echo $persion->get_name() . "<br>";
+
+    #endregion
+
+    /******************************************
+    * 3. Inheritance / Constants
+    ******************************************/ 
+
+    #region   
+    // class PERSIONINFO {
+    //     public $name = '';
+    //     public $age = 0;
+    //     const LEAVING_MESSAGE = "Thank you for visiting my youtune.com!";
+
+    //     function __construct($name, $age) {
+    //         $this->name = $name;
+    //         $this->age = $age;
+    //     }    
+    //     function intro() {
+    //         echo "The persion is {$this->name} and the age is {$this->age}.<br>";
+    //     }
+    //     function byebye() {
+    //         echo self::LEAVING_MESSAGE . "<br>";            
+    //     }        
+    // }
+
+    // class MAN extends PERSIONINFO {
+    //     public function message() {
+    //         echo "Am I a Man? <br>";
+    //     }
+    // }
+
+    // $man = new MAN("Peter jackson", 56);
+    // $man->message();
+    // $man->intro();
+
+    // /* 상수호출하는 방법 1 : object에서 호출하는 방법 */
+    // $man->byebye();
+ 
+    // /* 상수호출하는 방법 2 : class에서 호출하는 방법 */
+    // echo PERSIONINFO::LEAVING_MESSAGE;
+
+    #endregion
+
+    /******************************************
+    * 4. Static Method/Property
+    ******************************************/ 
+
+    #region       
+
+    /* create & access */
+    // class ClassName {
+    //     public static $staticProp = 3.14159;
+    //     public static function staticMethod() {
+    //         echo "Hello World!";
+    //     }
+    // }
+    
+    // echo ClassName::$staticProp . "<br>";
+    // echo ClassName::staticMethod() . "<br>";
+
+    /* more static method */
+    // class greeting {
+    //     public static function welcome() {
+    //         echo "Hello World!";
+    //     }
+        
+    //     public function __construct() {
+    //         self::welcome();
+    //     }
+    // }
+    
+    // new greeting();
+
+    /* more static property */
+    // class pi {
+    //     public static $value=3.14159;
+    //     public function staticValue() {
+    //       return self::$value;
+    //     }
+    // }
+    
+    // $pi = new pi();
+    // echo $pi->staticValue();
+        
+    #endregion
+?>
+</body>
+</html>

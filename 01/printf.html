@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>printf</title>
+</head>
+<body>
+<?
+    // 1. A	floating-point number to two decimal places:
+    printf('%.2f', 27.452);     // 27.45
+
+    // 2. Decimal and hexadecimal output:
+    printf('The	hex	valueof	%d	is	%x', 214, 214); // The	hex	value	of	214	is	d6
+    
+    // 3. Padding an integer to	three decimal places:
+    printf('Bond. James	Bond. %03d.', 7);     // Bond.	James	Bond.	007.
+
+    // 4. Formatting a date:
+    $month = 2;
+    $day = 15;
+    $year = 2005;
+    printf('%02d/%02d/%04d', $month, $day, $year);  // 02/15/2005
+
+?>
+</body>
+</html>
